@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-i3+#+zp+3=qwcc^y_bhg^wf1a=0mltsrmd#e95pgbt59ayuxn#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*', 'https://eduapp.dionisiubrovka.online']
+CSRF_TRUSTED_ORIGINS = ['https://eduapp.dionisiubrovka.online']
 
 
 # Application definition
