@@ -8,6 +8,12 @@ class GallerySerializers(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class FAQSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = FAQ
+        fields = '__all__'
+
+
 class SpecialtyGroupSerializers(serializers.ModelSerializer):
     class Meta:
         model = SpecialtyGroup
@@ -29,7 +35,7 @@ class EventDetailSerializer(serializers.ModelSerializer):
 class SpecialtyListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Specialty
-        fields = ['id','title','code']
+        fields = ['id','title','code', 'icon']
 
 
 class SpecialtyDetailSerializer(serializers.ModelSerializer):
