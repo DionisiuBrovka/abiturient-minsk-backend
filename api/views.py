@@ -10,8 +10,7 @@ from .serializers import *
 class MainView(ViewSet):
     def list(self, request):
         data = {
-            'admin':'http://127.0.0.1:8000/admin/',
-            'api':'http://127.0.0.1:8000/api/v1/'
+            'api':reverse('api-v1',request=request),
         }
         return Response(data)
 

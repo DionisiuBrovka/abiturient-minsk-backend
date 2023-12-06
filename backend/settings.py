@@ -33,6 +33,7 @@ CSRF_TRUSTED_ORIGINS = ['https://eduapp.dionisiubrovka.online']
 
 INSTALLED_APPS = [
     'api',
+    'backend',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

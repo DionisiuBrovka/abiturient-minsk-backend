@@ -5,7 +5,7 @@ from .views import *
 
 urlpatterns = [
     path('', MainView.as_view({'get': 'list'})),
-    path('api/v1/', RootView.as_view({'get': 'list'})),
+    path('api/v1/', RootView.as_view({'get': 'list'}), name='api-v1'),
     path('api/v1/establishment/', EstablismentListView.as_view({'get': 'list'}), name='establishments'),
     path('api/v1/establishment/<int:pk>/', EstablismentDetailView.as_view({'get': 'list'})),
     path('api/v1/speciality/', SpecialityListView.as_view({'get': 'list'}), name='specialitys'),
