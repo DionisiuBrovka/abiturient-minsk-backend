@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import *
 
-admin.site.site_header = 'Адним панель "Приложения коляг"'
+admin.site.site_header = '"Абитуриент" v.0.0.1a'
 
 # Register your models here.
 
@@ -10,15 +10,37 @@ class EstablishmentAdmin(admin.ModelAdmin):
     list_display = ['id', 'title', 'adress']
     list_display_links = ['id', 'title']
 
+    fieldsets = [
+        (
+            "Блок (Название)", {
+                "fields" : ["title", "short_title"]
+            }
+        ),
+        (
+            "Блок (Местоположение)", {
+                "fields" : ["adress","coords"]
+            }
+        ),
+        (
+            "Блок (Описание)", {
+                "fields" : ["desc","icon","prev","promo_medio"]
+            }
+        ),
+        (
+            "Блок (Контакты)", {
+                "fields" : ["tel","mail","email","wsite","wtel","wvk","winsta","wother"]
+            }
+        ),
+        (
+            "Блок (Специальности)", {
+                "fields" : ["specialty"]
+            }
+        ),
+        
+    ]
+
     search_fields = ['title', 'short_title']
 
-@admin.register(SpecialtyGroup)
-class SpecialtyGroupAdmin(admin.ModelAdmin):
-    list_display = ['id', 'code', 'title', 'g_type']
-    list_display_links = ['id', 'code', 'title']
-    list_filter = ['g_type']
-
-    search_fields = ['code', 'title']
 
 @admin.register(Specialty)
 class SpecialtyAdmin(admin.ModelAdmin):
@@ -27,7 +49,27 @@ class SpecialtyAdmin(admin.ModelAdmin):
 
     search_fields = ['code', 'title', 'skill']
 
-@admin.register(Contact)
-class ContactAdmin(admin.ModelAdmin):
-    list_display = ['id', 'title', 'c_type']
-    list_display_links = ['title', 'c_type']
+
+@admin.register(Event)
+class EventAdmin(admin.ModelAdmin):
+    list_display = ['id','title', 'e_date']
+    list_display_links = ['id','title', 'e_date']
+
+    search_fields = ['title']
+
+
+@admin.register(Gallery)
+class GalleryAdmin(admin.ModelAdmin):
+    list_display = ['id','est','photo']
+    list_display_links = ['id','est']
+
+@admin.register(FAQ)
+class FAQAdmin(admin.ModelAdmin):
+    list_display = ['id','q']
+    list_display_links = ['id','q']
+
+@admin.register(SpecialtyGroup)
+class FAQAdmin(admin.ModelAdmin):
+    list_display = ['id','title']
+    list_display_links = ['id','title']
+
