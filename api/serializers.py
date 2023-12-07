@@ -50,7 +50,7 @@ class SpecialtyDetailSerializer(serializers.ModelSerializer):
 class EstablishmentListSerializer(serializers.ModelSerializer):    
     class Meta:
         model = Establishment
-        fields = ['id','title','short_title','adress']
+        fields = ['id','title','short_title','adress', 'icon']
 
 
 class EstablishmentDetailSerializer(serializers.ModelSerializer):    
