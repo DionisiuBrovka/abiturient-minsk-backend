@@ -22,15 +22,15 @@ class Establishment(models.Model):
     adress = models.CharField(max_length=255, null=False, blank=False, verbose_name="Адрес")
 
     tel = models.CharField(max_length=255, null=True, blank=True, verbose_name="Номер телефона")
-    mail = models.CharField(max_length=255, null=True, blank=True, verbose_name="Почтовые реквизиты")
     email = models.EmailField(null=True, blank=True, verbose_name="Электронная почта")
     wsite = models.URLField(null=True,blank=True,verbose_name="Веб сайт")
     wtel = models.URLField(null=True,blank=True,verbose_name="Телеграм")
     wvk = models.URLField(null=True,blank=True,verbose_name="Вк")
     winsta = models.URLField(null=True,blank=True,verbose_name="Инстаграм")
+    wface = models.URLField(null=True,blank=True,verbose_name="Фейсбук")
+    wtwit = models.URLField(null=True,blank=True,verbose_name="Твиттер")
+    wtic = models.URLField(null=True,blank=True,verbose_name="Тик-ток")
     wother = models.URLField(null=True,blank=True,verbose_name="Прочее")
-
-    specialty = models.ManyToManyField('Specialty', null=True, blank=True, verbose_name="Специальности")
 
     icon = models.ImageField(upload_to=wrapper, null=True, blank=True, verbose_name="Логотип")
     prev = models.ImageField(upload_to=wrapper, null=True, blank=True, verbose_name="Превью")
@@ -60,7 +60,7 @@ class Event(models.Model):
 
     e_date = models.DateTimeField(null=False, blank=False, verbose_name="Дата мероприятия")
     title = models.CharField(max_length=255, null=False, blank=False, verbose_name="Название мероприятия")
-    desc = models.TextField(null=False,blank=False, verbose_name="Описание")
+    desc = models.TextField(null=False, blank=False, verbose_name="Описание")
     prev = models.ImageField(upload_to=wrapper, null=True, blank=True, verbose_name="Превью")
 
     org = models.ForeignKey('Establishment', models.CASCADE, related_name="events", null=True, blank=True, verbose_name="Организатор" )
@@ -87,9 +87,9 @@ class Gallery(models.Model):
         # return the whole path to the file
         return os.path.join('gallery/', filename)
 
+    est = models.ForeignKey('Establishment', models.CASCADE, related_name="gallery", null=False, blank=False, verbose_name="УО")
     photo = models.ImageField(upload_to=wrapper, null=False, blank=False, verbose_name="Превью")
     desc = models.TextField(null=False, blank=False, verbose_name="Описание")
-    est = models.ForeignKey('Establishment', models.CASCADE, related_name="gallery", null=True, blank=True, verbose_name="УО")
 
     def __str__(self) -> str:
         return super().__str__()
@@ -124,33 +124,76 @@ class Specialty(models.Model):
         return os.path.join('spec/', filename)
 
     COISES = [
-        ("S","ССО"),
-        ("P","ПТО"),
+        ("ССО","ССО"),
+        ("ПТО","ПТО"),
     ]
 
-    SOISES = [
-        ("9","На основе общего базового образования (после 9 кл.)"),
-        ("11","На основе общего среднего образования (после 11 кл.)"),
-        ("PTO","На основе ПТО"),
-    ]
-
-    c_type = models.CharField(max_length=1, choices=COISES, null=False, blank=False, verbose_name="Тип")
-    s_type = models.CharField(max_length=3, choices=SOISES, null=False, blank=False, verbose_name="На базе ...")
-    group = models.ForeignKey('SpecialtyGroup', models.CASCADE, null=False , blank=False, verbose_name="Группа специальностей")
-    code = models.CharField(max_length=50, null=False, blank=False, verbose_name="Код")
+    code = models.CharField(max_length=100, unique=True, null=False, blank=False, verbose_name="Код")
     title = models.CharField(max_length=255, null=False, blank=False, verbose_name="Название специальности")
-    skill = models.CharField(max_length=255, null=False, blank=False, verbose_name="Название квалификации")
+    c_type = models.CharField(max_length=3, choices=COISES, null=False, blank=False, verbose_name="Тип")
+    
+    group = models.ForeignKey('SpecialtyGroup', models.CASCADE, null=True , blank=True, verbose_name="Группа специальностей")
+    
     prev = models.ImageField(upload_to=wrapper, null=True, blank=True, verbose_name="Превью")
     desc = models.TextField(null=True, blank=True, verbose_name="Описание")
 
     icon = models.CharField(max_length=255, null=True, blank=True, verbose_name="ИД иконки флаттер")
 
     def __str__(self) -> str:
-        return self.code + " // " + self.title
+        return f"{self.code} // {self.title} // {self.c_type}"
 
     class Meta:
         verbose_name = "Специальность"
         verbose_name_plural = "Специальности"
+
+
+class Skill(models.Model):
+    code = models.CharField(max_length=100, unique=True, null=False, blank=False, verbose_name="Код")
+    title = models.CharField(max_length=255, null=False, blank=False, verbose_name="Название квалификации")
+
+    specialty = models.ForeignKey('Specialty', models.CASCADE, related_name="skills", null=False , blank=False, verbose_name="Специальность")
+    
+    desc = models.TextField(null=True, blank=True, verbose_name="Описание")
+
+    def __str__(self) -> str:
+        return f"{self.code} // {self.title} // "
+
+    class Meta:
+        verbose_name = "Квалификация"
+        verbose_name_plural = "Квалификации"
+
+
+class SkillForEstablishment(models.Model):
+
+    SOISES = [
+        ("9","На основе общего базового образования (после 9 кл.)"),
+        ("11","На основе общего среднего образования (после 11 кл.)"),
+        ("ПТО","На основе ПТО"),
+    ]
+
+    est = models.ForeignKey('Establishment', models.CASCADE, related_name="skills", null=False, blank=False, verbose_name="УО")
+    skill = models.ForeignKey('Specialty', models.CASCADE, related_name="svod", null=False , blank=False, verbose_name="Квалификация")
+    s_type = models.CharField(max_length=3, choices=SOISES, null=False, blank=False, verbose_name="На базе ...")
+
+    b_count = models.IntegerField(null=True, blank=True, verbose_name="Количество набора на бюджет")
+    b_long = models.CharField(max_length=255, null=True, blank=True, verbose_name="Продолжительность обучения на бюджете")
+
+    p_count = models.IntegerField(null=True, blank=True, verbose_name="Количество набора на платное")
+    p_long = models.CharField(max_length=255, null=True, blank=True, verbose_name="Продолжительность обучения на платном")
+
+    avd = models.FloatField(null=True, blank=True, verbose_name="Средний балл")
+    rule = models.CharField(max_length=255, null=True, blank=True, verbose_name="Правила набора")
+    
+    is_opfr = models.BooleanField(default=False, verbose_name="Введется ли набор обучающихся с ОПФР")
+    opfr_qnic = models.CharField(max_length=255, null=True, blank=True, verbose_name="Особенности ОПФР")
+
+
+    def __str__(self) -> str:
+        return f"{self.id}"
+
+    class Meta:
+        verbose_name = "Сводная таблица"
+        verbose_name_plural = "Сводная таблица"
 
 
 class FAQ(models.Model):

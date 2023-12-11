@@ -22,6 +22,8 @@ class RootView(ViewSet):
             'specialitys-sso':reverse('specialitys-sso',request=request),
             'specialitys-pto':reverse('specialitys-pto',request=request),
             'specialitys-est':reverse('specialitys-est', args=[1] ,request=request),
+            'skills':reverse('skills',request=request),
+            'skill-est':reverse('skill-est',request=request),
             'events':reverse('events',request=request),
             'faq':reverse('faq',request=request),
         }
@@ -34,6 +36,7 @@ class EstablismentListView(ViewSet):
         serializer = EstablishmentListSerializer(queryset, many=True)
         return Response(serializer.data)
     
+
 class EstablismentDetailView(ViewSet):
     def list(self, request, pk=1):
         queryset = Establishment.objects.get(id=pk)
@@ -50,29 +53,66 @@ class SpecialityListView(ViewSet):
 
 class SpecialitySSOListView(ViewSet):
     def list(self, request):
-        queryset = Specialty.objects.filter(c_type="S")
+        queryset = Specialty.objects.filter(c_type="ССО")
         serializer = SpecialtyListSerializer(queryset, many=True)
         return Response(serializer.data)
 
 
 class SpecialityPTOListView(ViewSet):
     def list(self, request):
-        queryset = Specialty.objects.filter(c_type="P")
+        queryset = Specialty.objects.filter(c_type="ПТО")
         serializer = SpecialtyListSerializer(queryset, many=True)
         return Response(serializer.data)
 
+
 class SpecialityESTListView(ViewSet):
     def list(self, request, pk=1):
-        queryset = Establishment.objects.filter(specialty=pk)
+        queryset = Establishment.objects.filter(skills=pk)
         serializer = EstablishmentListSerializer(queryset, many=True)
         return Response(serializer.data)
+
 
 class SpecialityDetailView(ViewSet):
     def list(self, request, pk=1):
         queryset = Specialty.objects.get(id=pk)
         serializer = SpecialtyDetailSerializer(queryset)
         return Response(serializer.data)
+
+
+class SkillListView(ViewSet):
+    def list(self, request, pk=1):
+        queryset = Skill.objects.all()
+        serializer = SkillListSerializer(queryset, many=True)
+        return Response(serializer.data)
     
+
+class SkillDetailView(ViewSet):
+    def list(self, request, pk=1):
+        queryset = Skill.objects.get(id=pk)
+        serializer = SkillDetailSerializer(queryset)
+        return Response(serializer.data)
+
+
+class SkillESTListView(ViewSet):
+    def list(self, request, pk=1):
+        queryset = Establishment.objects.filter(skills__skill=pk)
+        serializer = EstablishmentListSerializer(queryset, many=True)
+        return Response(serializer.data)
+    
+
+class SkillForEstListView(ViewSet):
+    def list(self, request, pk=1):
+        queryset = SkillForEstablishment.objects.all()
+        serializer = SkillForEstListSerializer(queryset, many=True)
+        return Response(serializer.data)
+    
+
+class SkillForEstDetailView(ViewSet):
+    def list(self, request, pk=1):
+        queryset = SkillForEstablishment.objects.get(id=pk)
+        serializer = SkillForEstDetailSerializer(queryset)
+        return Response(serializer.data)
+
 
 class EventsListView(ViewSet):
     def list(self, request):

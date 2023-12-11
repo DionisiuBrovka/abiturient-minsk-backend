@@ -39,7 +39,6 @@ class SpecialtyListSerializer(serializers.ModelSerializer):
 
 
 class SpecialtyDetailSerializer(serializers.ModelSerializer):
-    
     group = SpecialtyGroupSerializers()
     
     class Meta:
@@ -47,14 +46,39 @@ class SpecialtyDetailSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class SkillListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Skill
+        fields = ['id', 'code', 'title']
+
+
+class SkillDetailSerializer(serializers.ModelSerializer):
+    specialty = SpecialtyListSerializer()
+
+    class Meta:
+        model = Skill
+        fields = '__all__'
+
+
+class SkillForEstListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SkillForEstablishment
+        fields = ['id', 'est', 'skill', 's_type']
+
+
+class SkillForEstDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SkillForEstablishment
+        fields = '__all__'
+        
+
 class EstablishmentListSerializer(serializers.ModelSerializer):    
     class Meta:
         model = Establishment
-        fields = ['id','title','short_title','adress', 'icon']
+        fields = ['id','title','short_title','adress', 'icon', 'coords']
 
 
 class EstablishmentDetailSerializer(serializers.ModelSerializer):    
-    
     events = EventListSerializer(many=True, read_only=True)
     gallery = GallerySerializers(many=True, read_only=True)
     specialty = SpecialtyListSerializer(many=True, read_only=True)
