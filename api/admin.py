@@ -28,6 +28,8 @@ class SpecialtyAdmin(admin.ModelAdmin):
     list_display_links = ['id', 'code', 'title']
     search_fields = ['code', 'title']
 
+    list_filter = ['c_type']
+
     inlines = [SkillInline]
 
 
@@ -40,6 +42,7 @@ class SpecialtyInline(admin.TabularInline):
 class SpecialtyGroupAdmin(admin.ModelAdmin):
     list_display = ['id','title']
     list_display_links = ['id','title']
+    
 
     inlines = [SpecialtyInline]
 
