@@ -42,6 +42,7 @@ class Establishment(models.Model):
         return self.short_title
 
     class Meta:
+        ordering = ['-title']
         verbose_name = "Образовательное учреждение"
         verbose_name_plural = "Образовательные учреждения"
 
@@ -70,6 +71,7 @@ class Event(models.Model):
         return str(self.e_date) + " " + self.title
 
     class Meta:
+        ordering = ['-e_date']
         verbose_name = "Мероприятие"
         verbose_name_plural = "Мероприятия"
 
@@ -106,6 +108,7 @@ class SpecialtyGroup(models.Model):
         return self.title
 
     class Meta:
+        ordering = ['-title']
         verbose_name = "Группа специальностей"
         verbose_name_plural = "Группы специальностей"
 
@@ -143,6 +146,7 @@ class Specialty(models.Model):
         return f"{self.code} // {self.title} // {self.c_type}"
 
     class Meta:
+        ordering = ['title']
         verbose_name = "Специальность"
         verbose_name_plural = "Специальности"
 
@@ -150,6 +154,7 @@ class Specialty(models.Model):
 class Skill(models.Model):
     code = models.CharField(max_length=100, unique=True, null=False, blank=False, verbose_name="Код")
     title = models.CharField(max_length=255, null=False, blank=False, verbose_name="Название квалификации")
+    searchtag = models.TextField(null=True, blank=True, verbose_name="Теги для поиска")
 
     specialty = models.ForeignKey('Specialty', models.CASCADE, related_name="skills", null=False , blank=False, verbose_name="Специальность")
     
@@ -159,6 +164,7 @@ class Skill(models.Model):
         return f"{self.code} // {self.title} // "
 
     class Meta:
+        ordering = ['title']
         verbose_name = "Квалификация"
         verbose_name_plural = "Квалификации"
 
@@ -172,7 +178,7 @@ class SkillForEstablishment(models.Model):
     ]
 
     est = models.ForeignKey('Establishment', models.CASCADE, related_name="skills", null=False, blank=False, verbose_name="УО")
-    skill = models.ForeignKey('Specialty', models.CASCADE, related_name="svod", null=False , blank=False, verbose_name="Квалификация")
+    skill = models.ForeignKey('Skill', models.CASCADE, related_name="svod", null=False , blank=False, verbose_name="Квалификация")
     s_type = models.CharField(max_length=3, choices=SOISES, null=False, blank=False, verbose_name="На базе ...")
 
     b_count = models.IntegerField(null=True, blank=True, verbose_name="Количество набора на бюджет")
@@ -205,5 +211,6 @@ class FAQ(models.Model):
         return str(self.id) + " // " + self.q
 
     class Meta:
+        ordering = ['q']
         verbose_name = "Вопрос - Ответ"
         verbose_name_plural = "Вопрос - Ответ"

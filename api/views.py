@@ -23,6 +23,11 @@ class RootView(ViewSet):
             'specialitys-pto':reverse('specialitys-pto',request=request),
             'specialitys-est':reverse('specialitys-est', args=[1] ,request=request),
             'skills':reverse('skills',request=request),
+            'skills-linked':reverse('skills-linked',request=request),
+            'skills-sso':reverse('skills-sso',request=request),
+            'skills-pto':reverse('skills-pto',request=request),
+            'skills-linked-sso':reverse('skills-linked-sso',request=request),
+            'skills-linked-pto':reverse('skills-linked-pto',request=request),
             'skill-est':reverse('skill-est',request=request),
             'events':reverse('events',request=request),
             'faq':reverse('faq',request=request),
@@ -80,11 +85,47 @@ class SpecialityDetailView(ViewSet):
 
 
 class SkillListView(ViewSet):
-    def list(self, request, pk=1):
+    def list(self, request):
         queryset = Skill.objects.all()
         serializer = SkillListSerializer(queryset, many=True)
         return Response(serializer.data)
+
+
+class SkillLinkedListView(ViewSet):
+    def list(self, request):
+        queryset = Skill.objects.exclude(svod__isnull=True)
+        serializer = SkillListSerializer(queryset, many=True)
+        return Response(serializer.data)
+
+
+class SkillSSOListView(ViewSet):
+    def list(self, request):
+        queryset = Skill.objects.filter(specialty__c_type="ССО")
+        serializer = SkillListSerializer(queryset, many=True)
+        return Response(serializer.data)
     
+
+class SkillPTOListView(ViewSet):
+    def list(self, request):
+        queryset = Skill.objects.filter(specialty__c_type="ПТО")
+        serializer = SkillListSerializer(queryset, many=True)
+        return Response(serializer.data)
+
+
+class SkillLinkedSSOListView(ViewSet):
+    def list(self, request):
+        queryset = Skill.objects.exclude(svod__isnull=True).filter(specialty__c_type="ССО")
+        serializer = SkillListSerializer(queryset, many=True)
+        return Response(serializer.data)
+
+
+class SkillLinkedPTOListView(ViewSet):
+    def list(self, request):
+        queryset = Skill.objects.exclude(svod__isnull=True).filter(specialty__c_type="ПТО")
+        serializer = SkillListSerializer(queryset, many=True)
+        return Response(serializer.data)
+
+
 
 class SkillDetailView(ViewSet):
     def list(self, request, pk=1):

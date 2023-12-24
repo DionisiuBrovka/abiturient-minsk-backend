@@ -9,12 +9,32 @@ class FAQAdmin(admin.ModelAdmin):
     list_display = ['id','q']
     list_display_links = ['id','q']
 
+class ActualSkillListFilter(admin.SimpleListFilter):
+    title = "Связаные"
+    parameter_name = "linked"
+
+    def lookups(self, request, model_admin):
+
+        return [
+            ("Y", 'Да'),
+            ("N", 'Нет'),
+        ]
+    
+    def queryset(self, request, queryset):
+
+        if self.value() == "Y":
+            return queryset.exclude(svod__isnull=True)
+        if self.value() == "N":
+            return queryset
+
 
 @admin.register(Skill)
 class SkillAdmin(admin.ModelAdmin):
     list_display = ['id', 'code', 'title', 'specialty']
     list_display_links = ['id', 'code', 'title']
     search_fields = ['code', 'title']
+
+    list_filter = ['specialty__c_type', ActualSkillListFilter ,'svod__est']
 
 
 class SkillInline(admin.TabularInline):

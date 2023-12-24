@@ -47,9 +47,11 @@ class SpecialtyDetailSerializer(serializers.ModelSerializer):
 
 
 class SkillListSerializer(serializers.ModelSerializer):
+    specialty = SpecialtyListSerializer()
+
     class Meta:
         model = Skill
-        fields = ['id', 'code', 'title']
+        fields = ['id', 'code', 'title', 'specialty', 'svod', 'searchtag']
 
 
 class SkillDetailSerializer(serializers.ModelSerializer):
@@ -61,6 +63,9 @@ class SkillDetailSerializer(serializers.ModelSerializer):
 
 
 class SkillForEstListSerializer(serializers.ModelSerializer):
+
+    skill = SkillListSerializer()
+
     class Meta:
         model = SkillForEstablishment
         fields = ['id', 'est', 'skill', 's_type']
@@ -81,7 +86,7 @@ class EstablishmentListSerializer(serializers.ModelSerializer):
 class EstablishmentDetailSerializer(serializers.ModelSerializer):    
     events = EventListSerializer(many=True, read_only=True)
     gallery = GallerySerializers(many=True, read_only=True)
-    specialty = SpecialtyListSerializer(many=True, read_only=True)
+    skills = SkillForEstListSerializer(many=True, read_only=True)
 
     class Meta:
         model = Establishment

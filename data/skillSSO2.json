@@ -1,0 +1,1766 @@
+[
+    {
+        "model": "api.Skill",
+        "pk": 536,
+        "fields": {
+            "code": "5-04-0112-01",
+            "title": "Воспитатель дошкольного образования",
+            "specialty": 160
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 537,
+        "fields": {
+            "code": "5-04-0112-02",
+            "title": "Учитель",
+            "specialty": 161
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 538,
+        "fields": {
+            "code": "5-04-0113-01",
+            "title": "Учитель",
+            "specialty": 162
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 539,
+        "fields": {
+            "code": "5-04-0113-02",
+            "title": "Учитель",
+            "specialty": 163
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 540,
+        "fields": {
+            "code": "5-04-0113-03",
+            "title": "Учитель",
+            "specialty": 164
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 541,
+        "fields": {
+            "code": "5-04-0113-04",
+            "title": "Учитель",
+            "specialty": 165
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 542,
+        "fields": {
+            "code": "5-04-0113-05",
+            "title": "Учитель. Музыкальный руководитель",
+            "specialty": 166
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 543,
+        "fields": {
+            "code": "5-04-0114-01",
+            "title": "Воспитатель",
+            "specialty": 167
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 544,
+        "fields": {
+            "code": "5-04-0115-01",
+            "title": "Учитель",
+            "specialty": 168
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 545,
+        "fields": {
+            "code": "5-04-0211-01",
+            "title": "Техник-технолог",
+            "specialty": 169
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 546,
+        "fields": {
+            "code": "5-04-0211-02",
+            "title": "Дизайнер",
+            "specialty": 170
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 547,
+        "fields": {
+            "code": "5-04-0212-01",
+            "title": "Дизайнер. Учитель",
+            "specialty": 171
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 548,
+        "fields": {
+            "code": "5-04-0213-01",
+            "title": "Художник. Учитель",
+            "specialty": 172
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 549,
+        "fields": {
+            "code": "5-04-0213-02",
+            "title": "Скульптор. Учитель",
+            "specialty": 173
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 550,
+        "fields": {
+            "code": "5-04-0213-03",
+            "title": "Художник. Учитель",
+            "specialty": 174
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 551,
+        "fields": {
+            "code": "5-04-0215-01",
+            "title": "Учитель. Концертмейстер",
+            "specialty": 175
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 552,
+        "fields": {
+            "code": "5-04-0215-02",
+            "title": "Артист. Концертмейстер. Учитель",
+            "specialty": 176
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 553,
+        "fields": {
+            "code": "5-04-0215-03",
+            "title": "Артист. Руководитель творческого коллектива. Учитель",
+            "specialty": 177
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 554,
+        "fields": {
+            "code": "5-04-0215-04",
+            "title": "Артист. Руководитель творческого коллектива. Учитель",
+            "specialty": 178
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 555,
+        "fields": {
+            "code": "5-04-0215-05",
+            "title": "Артист. Руководитель вокальной студии. Учитель",
+            "specialty": 179
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 556,
+        "fields": {
+            "code": "5-04-0215-06",
+            "title": "Артист. Руководитель творческого коллектива. Учитель",
+            "specialty": 180
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 557,
+        "fields": {
+            "code": "5-04-0215-07",
+            "title": "Артист. Руководитель творческого коллектива. Учитель",
+            "specialty": 181
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 558,
+        "fields": {
+            "code": "5-04-0215-08",
+            "title": "Артист. Руководитель творческого коллектива. Учитель",
+            "specialty": 182
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 559,
+        "fields": {
+            "code": "5-04-0215-09",
+            "title": "Организатор досуга. Руководитель коллектива художественного творчества",
+            "specialty": 183
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 560,
+        "fields": {
+            "code": "5-04-0215-10",
+            "title": "Организатор досуга. Руководитель коллектива художественного творчества",
+            "specialty": 184
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 561,
+        "fields": {
+            "code": "5-04-0215-11",
+            "title": "Организатор досуга. Руководитель коллектива художественного творчества",
+            "specialty": 185
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 562,
+        "fields": {
+            "code": "5-04-0215-12",
+            "title": "Артист. Руководитель творческого коллектива. Учитель",
+            "specialty": 186
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 563,
+        "fields": {
+            "code": "5-04-0215-13",
+            "title": "Артист. Руководитель творческого коллектива. Учитель",
+            "specialty": 187
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 564,
+        "fields": {
+            "code": "5-04-0231-01",
+            "title": "Специалист по межкультурной коммуникации",
+            "specialty": 188
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 565,
+        "fields": {
+            "code": "5-04-0231-02",
+            "title": "Специалист по сурдокоммуникации",
+            "specialty": 189
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 566,
+        "fields": {
+            "code": "5-04-0311-01",
+            "title": "Техник-экономист",
+            "specialty": 190
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 567,
+        "fields": {
+            "code": "5-04-0322-01",
+            "title": "Библиотекарь",
+            "specialty": 191
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 568,
+        "fields": {
+            "code": "5-04-0322-02",
+            "title": "Секретарь-референт",
+            "specialty": 192
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 569,
+        "fields": {
+            "code": "5-04-0411-01",
+            "title": "Бухгалтер",
+            "specialty": 193
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 570,
+        "fields": {
+            "code": "5-04-0411-02",
+            "title": "Специалист по финансовым услугам",
+            "specialty": 194
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 571,
+        "fields": {
+            "code": "5-04-0411-03",
+            "title": "Специалист по банковским услугам",
+            "specialty": 195
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 572,
+        "fields": {
+            "code": "5-04-0411-04",
+            "title": "Специалист по оказанию розничных банковских услуг",
+            "specialty": 196
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 573,
+        "fields": {
+            "code": "5-04-0412-01",
+            "title": "Специалист по маркетинговым услугам",
+            "specialty": 197
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 574,
+        "fields": {
+            "code": "5-04-0412-02",
+            "title": "Операционный логист",
+            "specialty": 198
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 575,
+        "fields": {
+            "code": "5-04-0412-03",
+            "title": "Специалист по визуальному мерчендайзингу",
+            "specialty": 199
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 576,
+        "fields": {
+            "code": "5-04-0413-01",
+            "title": "Товаровед",
+            "specialty": 200
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 577,
+        "fields": {
+            "code": "5-04-0421-01",
+            "title": "Юрист",
+            "specialty": 201
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 578,
+        "fields": {
+            "code": "5-04-0532-01",
+            "title": "Техник-геолог",
+            "specialty": 202
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 579,
+        "fields": {
+            "code": "5-04-0532-02",
+            "title": "Техник-землеустроитель",
+            "specialty": 203
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 580,
+        "fields": {
+            "code": "5-04-0532-03",
+            "title": "Техник-геодезист",
+            "specialty": 204
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 581,
+        "fields": {
+            "code": "5-04-0532-04",
+            "title": "Техник-топограф",
+            "specialty": 205
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 582,
+        "fields": {
+            "code": "5-04-0611-01",
+            "title": "Техник-программист",
+            "specialty": 206
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 583,
+        "fields": {
+            "code": "5-04-0611-02",
+            "title": "Техник по информационной безопасности",
+            "specialty": 207
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 584,
+        "fields": {
+            "code": "5-04-0611-03",
+            "title": "Техник-программист",
+            "specialty": 208
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 585,
+        "fields": {
+            "code": "5-04-0612-01",
+            "title": "Тестировщик",
+            "specialty": 209
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 586,
+        "fields": {
+            "code": "5-04-0612-02",
+            "title": "Техник-программист",
+            "specialty": 210
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 587,
+        "fields": {
+            "code": "5-04-0711-01",
+            "title": "Техник-технолог",
+            "specialty": 211
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 588,
+        "fields": {
+            "code": "5-04-0711-02",
+            "title": "Техник-технолог",
+            "specialty": 212
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 589,
+        "fields": {
+            "code": "5-04-0711-03",
+            "title": "Техник-технолог",
+            "specialty": 213
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 590,
+        "fields": {
+            "code": "5-04-0711-04",
+            "title": "Техник-технолог",
+            "specialty": 214
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 591,
+        "fields": {
+            "code": "5-04-0711-05",
+            "title": "Техник-технолог",
+            "specialty": 215
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 592,
+        "fields": {
+            "code": "5-04-0711-06",
+            "title": "Техник-технолог",
+            "specialty": 216
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 593,
+        "fields": {
+            "code": "5-04-0711-07",
+            "title": "Техник-химик",
+            "specialty": 217
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 594,
+        "fields": {
+            "code": "5-04-0711-08",
+            "title": "Техник-технолог",
+            "specialty": 218
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 595,
+        "fields": {
+            "code": "5-04-0711-09",
+            "title": "Техник-технолог",
+            "specialty": 219
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 596,
+        "fields": {
+            "code": "5-04-0711-10",
+            "title": "Техник-биотехнолог",
+            "specialty": 220
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 597,
+        "fields": {
+            "code": "5-04-0711-11",
+            "title": "Техник-технолог",
+            "specialty": 221
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 598,
+        "fields": {
+            "code": "5-04-0712-01",
+            "title": "Техник-электрик",
+            "specialty": 222
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 599,
+        "fields": {
+            "code": "5-04-0712-02",
+            "title": "Техник-электрик. Мастер производственного обучения",
+            "specialty": 223
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 600,
+        "fields": {
+            "code": "5-04-0712-03",
+            "title": "Техник-электрик",
+            "specialty": 224
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 601,
+        "fields": {
+            "code": "5-04-0712-04",
+            "title": "Техник-энергетик",
+            "specialty": 225
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 602,
+        "fields": {
+            "code": "5-04-0712-05",
+            "title": "Техник-теплотехник",
+            "specialty": 226
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 603,
+        "fields": {
+            "code": "5-04-0712-06",
+            "title": "Техник-теплотехник",
+            "specialty": 227
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 604,
+        "fields": {
+            "code": "5-04-0712-07",
+            "title": "Техник-теплотехник",
+            "specialty": 228
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 605,
+        "fields": {
+            "code": "5-04-0712-08",
+            "title": "Техник-электрик",
+            "specialty": 229
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 606,
+        "fields": {
+            "code": "5-04-0713-01",
+            "title": "Техник-электроник",
+            "specialty": 230
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 607,
+        "fields": {
+            "code": "5-04-0713-02",
+            "title": "Техник по телекоммуникациям",
+            "specialty": 231
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 608,
+        "fields": {
+            "code": "5-04-0713-03",
+            "title": "Техник по телекоммуникациям",
+            "specialty": 232
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 609,
+        "fields": {
+            "code": "5-04-0713-04",
+            "title": "Техник",
+            "specialty": 233
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 610,
+        "fields": {
+            "code": "5-04-0713-05",
+            "title": "Техник-технолог",
+            "specialty": 234
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 611,
+        "fields": {
+            "code": "5-04-0713-06",
+            "title": "Техник",
+            "specialty": 235
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 612,
+        "fields": {
+            "code": "5-04-0713-07",
+            "title": "Техник-электромеханик",
+            "specialty": 236
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 613,
+        "fields": {
+            "code": "5-04-0713-08",
+            "title": "Техник-электроник",
+            "specialty": 237
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 614,
+        "fields": {
+            "code": "5-04-0713-09",
+            "title": "Техник-технолог",
+            "specialty": 238
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 615,
+        "fields": {
+            "code": "5-04-0714-01",
+            "title": "Техник",
+            "specialty": 239
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 616,
+        "fields": {
+            "code": "5-04-0714-02",
+            "title": "Техник. Мастер производственного обучения",
+            "specialty": 240
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 617,
+        "fields": {
+            "code": "5-04-0714-03",
+            "title": "Техник-механик",
+            "specialty": 241
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 618,
+        "fields": {
+            "code": "5-04-0714-04",
+            "title": "Техник-технолог",
+            "specialty": 242
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 619,
+        "fields": {
+            "code": "5-04-0714-05",
+            "title": "Техник-механик",
+            "specialty": 243
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 620,
+        "fields": {
+            "code": "5-04-0714-06",
+            "title": "Техник",
+            "specialty": 244
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 621,
+        "fields": {
+            "code": "5-04-0714-07",
+            "title": "Техник-технолог",
+            "specialty": 245
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 622,
+        "fields": {
+            "code": "5-04-0714-08",
+            "title": "Техник-технолог. Мастер производственного обучения",
+            "specialty": 246
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 623,
+        "fields": {
+            "code": "5-04-0714-09",
+            "title": "Техник-механик",
+            "specialty": 247
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 624,
+        "fields": {
+            "code": "5-04-0714-10",
+            "title": "Техник-механик",
+            "specialty": 248
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 625,
+        "fields": {
+            "code": "5-04-0714-11",
+            "title": "Техник-электромеханик",
+            "specialty": 249
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 626,
+        "fields": {
+            "code": "5-04-0714-12",
+            "title": "Техник-механик",
+            "specialty": 250
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 627,
+        "fields": {
+            "code": "5-04-0714-13",
+            "title": "Техник-механик",
+            "specialty": 251
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 628,
+        "fields": {
+            "code": "5-04-0714-14",
+            "title": "Техник-механик",
+            "specialty": 252
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 629,
+        "fields": {
+            "code": "5-04-0714-15",
+            "title": "Техник-механик",
+            "specialty": 253
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 630,
+        "fields": {
+            "code": "5-04-0714-16",
+            "title": "Техник-технолог",
+            "specialty": 254
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 631,
+        "fields": {
+            "code": "5-04-0714-17",
+            "title": "Техник-мехатроник",
+            "specialty": 255
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 632,
+        "fields": {
+            "code": "5-04-0714-18",
+            "title": "Техник",
+            "specialty": 256
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 633,
+        "fields": {
+            "code": "5-04-0715-01",
+            "title": "Техник-механик",
+            "specialty": 257
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 634,
+        "fields": {
+            "code": "5-04-0715-02",
+            "title": "Техник",
+            "specialty": 258
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 635,
+        "fields": {
+            "code": "5-04-0715-03",
+            "title": "Техник-механик",
+            "specialty": 259
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 636,
+        "fields": {
+            "code": "5-04-0715-04",
+            "title": "Техник-механик. Мастер производственного обучения",
+            "specialty": 260
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 637,
+        "fields": {
+            "code": "5-04-0715-05",
+            "title": "Техник-электроник",
+            "specialty": 261
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 638,
+        "fields": {
+            "code": "5-04-0715-06",
+            "title": "Техник-автомеханик",
+            "specialty": 262
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 639,
+        "fields": {
+            "code": "5-04-0715-07",
+            "title": "Техник-электрик",
+            "specialty": 263
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 640,
+        "fields": {
+            "code": "5-04-0715-08",
+            "title": "Судомеханик-судоводитель",
+            "specialty": 264
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 641,
+        "fields": {
+            "code": "5-04-0715-09",
+            "title": "Техник водных путей",
+            "specialty": 265
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 642,
+        "fields": {
+            "code": "5-04-0715-10",
+            "title": "Техник",
+            "specialty": 266
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 643,
+        "fields": {
+            "code": "5-04-0715-11",
+            "title": "Техник",
+            "specialty": 267
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 644,
+        "fields": {
+            "code": "5-04-0715-12",
+            "title": "Техник",
+            "specialty": 268
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 645,
+        "fields": {
+            "code": "5-04-0715-13",
+            "title": "Техник",
+            "specialty": 269
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 646,
+        "fields": {
+            "code": "5-04-0715-14",
+            "title": "Техник-электрик",
+            "specialty": 270
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 647,
+        "fields": {
+            "code": "5-04-0715-15",
+            "title": "Техник-электромеханик",
+            "specialty": 271
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 648,
+        "fields": {
+            "code": "5-04-0715-16",
+            "title": "Техник",
+            "specialty": 272
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 649,
+        "fields": {
+            "code": "5-04-0715-17",
+            "title": "Техник-электрик",
+            "specialty": 273
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 650,
+        "fields": {
+            "code": "5-04-0715-18",
+            "title": "Техник",
+            "specialty": 274
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 651,
+        "fields": {
+            "code": "5-04-0715-19",
+            "title": "Техник-механик",
+            "specialty": 275
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 652,
+        "fields": {
+            "code": "5-04-0715-20",
+            "title": "Техник-механик",
+            "specialty": 276
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 653,
+        "fields": {
+            "code": "5-04-0716-01",
+            "title": "Техник-электромеханик",
+            "specialty": 277
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 654,
+        "fields": {
+            "code": "5-04-0716-02",
+            "title": "Техник-электроник",
+            "specialty": 278
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 655,
+        "fields": {
+            "code": "5-04-0716-03",
+            "title": "Техник",
+            "specialty": 279
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 656,
+        "fields": {
+            "code": "5-04-0716-04",
+            "title": "Техник-метролог",
+            "specialty": 280
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 657,
+        "fields": {
+            "code": "5-04-0721-01",
+            "title": "Техник-технолог",
+            "specialty": 281
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 658,
+        "fields": {
+            "code": "5-04-0721-02",
+            "title": "Техник-технолог",
+            "specialty": 282
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 659,
+        "fields": {
+            "code": "5-04-0721-03",
+            "title": "Техник-технолог",
+            "specialty": 283
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 660,
+        "fields": {
+            "code": "5-04-0721-04",
+            "title": "Техник-технолог",
+            "specialty": 284
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 661,
+        "fields": {
+            "code": "5-04-0721-05",
+            "title": "Техник-технолог",
+            "specialty": 285
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 662,
+        "fields": {
+            "code": "5-04-0721-06",
+            "title": "Техник-технолог",
+            "specialty": 286
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 663,
+        "fields": {
+            "code": "5-04-0721-07",
+            "title": "Техник-технолог",
+            "specialty": 287
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 664,
+        "fields": {
+            "code": "5-04-0721-08",
+            "title": "Техник-технолог. Мастер производственного обучения",
+            "specialty": 288
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 665,
+        "fields": {
+            "code": "5-04-0722-01",
+            "title": "Техник-технолог",
+            "specialty": 289
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 666,
+        "fields": {
+            "code": "5-04-0721-02",
+            "title": "Техник-технолог",
+            "specialty": 290
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 667,
+        "fields": {
+            "code": "5-04-0721-03",
+            "title": "Техник-технолог",
+            "specialty": 291
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 668,
+        "fields": {
+            "code": "5-04-0721-04",
+            "title": "Техник-технолог",
+            "specialty": 292
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 669,
+        "fields": {
+            "code": "5-04-0721-05",
+            "title": "Техник-технолог",
+            "specialty": 293
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 670,
+        "fields": {
+            "code": "5-04-0721-06",
+            "title": "Техник-технолог",
+            "specialty": 294
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 671,
+        "fields": {
+            "code": "5-04-0721-07",
+            "title": "Техник-технолог",
+            "specialty": 295
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 672,
+        "fields": {
+            "code": "5-04-0721-08",
+            "title": "Техник-технолог. Мастер производственного обучения",
+            "specialty": 296
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 673,
+        "fields": {
+            "code": "5-04-0722-01",
+            "title": "Техник-технолог",
+            "specialty": 297
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 674,
+        "fields": {
+            "code": "5-04-0723-04",
+            "title": "Техник-технолог",
+            "specialty": 298
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 675,
+        "fields": {
+            "code": "5-04-0723-05",
+            "title": "Техник-технолог",
+            "specialty": 299
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 676,
+        "fields": {
+            "code": "5-04-0723-06",
+            "title": "Модельер-конструктор",
+            "specialty": 300
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 677,
+        "fields": {
+            "code": "5-04-0723-07",
+            "title": "Конструктор-техник-технолог",
+            "specialty": 301
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 678,
+        "fields": {
+            "code": "5-04-0723-08",
+            "title": "Техник-технолог",
+            "specialty": 302
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 679,
+        "fields": {
+            "code": "5-04-0723-09",
+            "title": "Техник-технолог. Мастер производственного обучения",
+            "specialty": 303
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 680,
+        "fields": {
+            "code": "5-04-0723-10",
+            "title": "Техник-технолог",
+            "specialty": 304
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 681,
+        "fields": {
+            "code": "5-04-0724-01",
+            "title": "Техник-технолог горный",
+            "specialty": 305
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 682,
+        "fields": {
+            "code": "5-04-0731-01",
+            "title": "Техник-архитектор",
+            "specialty": 306
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 683,
+        "fields": {
+            "code": "5-04-0731-02",
+            "title": "Техник-архитектор",
+            "specialty": 307
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 684,
+        "fields": {
+            "code": "5-04-0732-01",
+            "title": "Техник-строитель",
+            "specialty": 308
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 685,
+        "fields": {
+            "code": "5-04-0732-02",
+            "title": "Техник-строитель. Мастер производственного обучения",
+            "specialty": 309
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 686,
+        "fields": {
+            "code": "5-04-0732-03",
+            "title": "Специалист по эксплуатации зданий и сооружений",
+            "specialty": 310
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 687,
+        "fields": {
+            "code": "5-04-0732-04",
+            "title": "Специалист по строительству и эксплуатации энергоэффективных зданий и сооружений",
+            "specialty": 311
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 688,
+        "fields": {
+            "code": "5-04-0732-05",
+            "title": "Техник по монтажу и эксплуатации санитарнотехнического оборудования",
+            "specialty": 312
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 689,
+        "fields": {
+            "code": "5-04-0732-06",
+            "title": "Техник-строитель",
+            "specialty": 313
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 690,
+        "fields": {
+            "code": "5-04-0732-07",
+            "title": "Техник-строитель",
+            "specialty": 314
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 691,
+        "fields": {
+            "code": "5-04-0732-08",
+            "title": "Техник-строитель",
+            "specialty": 315
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 692,
+        "fields": {
+            "code": "5-04-0732-09",
+            "title": "Техник-строитель по дорожным сооружениям",
+            "specialty": 316
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 693,
+        "fields": {
+            "code": "5-04-0811-01",
+            "title": "Техник-технолог",
+            "specialty": 317
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 694,
+        "fields": {
+            "code": "5-04-0811-02",
+            "title": "Техник-технолог",
+            "specialty": 318
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 695,
+        "fields": {
+            "code": "5-04-0811-03",
+            "title": "Гидротехник",
+            "specialty": 319
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 696,
+        "fields": {
+            "code": "5-04-0811-04",
+            "title": "Организатор производства",
+            "specialty": 320
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 697,
+        "fields": {
+            "code": "5-04-0811-05",
+            "title": "Пчеловод-технолог",
+            "specialty": 321
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 698,
+        "fields": {
+            "code": "5-04-0812-01",
+            "title": "Техник-механик",
+            "specialty": 322
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 699,
+        "fields": {
+            "code": "5-04-0812-02",
+            "title": "Техник-механик. Мастер производственного обучения",
+            "specialty": 323
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 700,
+        "fields": {
+            "code": "5-04-0812-03",
+            "title": "Техник-электрик",
+            "specialty": 324
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 701,
+        "fields": {
+            "code": "5-04-0812-04",
+            "title": "Техник-электрик. Мастер производственного обучения",
+            "specialty": 325
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 702,
+        "fields": {
+            "code": "5-04-0821-01",
+            "title": "Техник по озеленению",
+            "specialty": 326
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 703,
+        "fields": {
+            "code": "5-04-0821-02",
+            "title": "Техник",
+            "specialty": 327
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 704,
+        "fields": {
+            "code": "5-04-0821-03",
+            "title": "Охотовед",
+            "specialty": 328
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 705,
+        "fields": {
+            "code": "5-04-0821-04",
+            "title": "Техник",
+            "specialty": 329
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 706,
+        "fields": {
+            "code": "5-04-0841-01",
+            "title": "Фельдшер ветеринарной медицины",
+            "specialty": 330
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 707,
+        "fields": {
+            "code": "5-04-0911-01",
+            "title": "Зубной техник",
+            "specialty": 331
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 708,
+        "fields": {
+            "code": "5-04-0911-02",
+            "title": "Зубной фельдшер",
+            "specialty": 332
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 709,
+        "fields": {
+            "code": "5-04-0911-03",
+            "title": "Фельдшер-акушер. Помощник врача",
+            "specialty": 333
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 710,
+        "fields": {
+            "code": "5-04-0911-04",
+            "title": "Фельдшер-гигиенист-эпидемиолог. Помощник врача-гигиениста, врача-эпидемиолога",
+            "specialty": 334
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 711,
+        "fields": {
+            "code": "5-04-0911-05",
+            "title": "Медицинская сестра (медицинский брат)",
+            "specialty": 335
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 712,
+        "fields": {
+            "code": "5-04-0911-06",
+            "title": "Фельдшер-лаборант",
+            "specialty": 336
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 713,
+        "fields": {
+            "code": "5-04-0911-07",
+            "title": "Техник-массажист",
+            "specialty": 337
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 714,
+        "fields": {
+            "code": "5-04-0911-08",
+            "title": "Инструктор по лечебной физкультуре. Медицинская сестра (медицинский брат)-массажист",
+            "specialty": 338
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 715,
+        "fields": {
+            "code": "5-04-0912-01",
+            "title": "Фармацевт",
+            "specialty": 339
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 716,
+        "fields": {
+            "code": "5-04-0921-01",
+            "title": "Специалист по социальной работе",
+            "specialty": 340
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 717,
+        "fields": {
+            "code": "5-04-1011-01",
+            "title": "Фототехник",
+            "specialty": 341
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 718,
+        "fields": {
+            "code": "5-04-1011-02",
+            "title": "Художник-модельер",
+            "specialty": 342
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 719,
+        "fields": {
+            "code": "5-04-1011-03",
+            "title": "Художник-модельер. Мастер производственного обучения",
+            "specialty": 343
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 720,
+        "fields": {
+            "code": "5-04-1012-01",
+            "title": "Тренер-преподаватель по спорту",
+            "specialty": 344
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 721,
+        "fields": {
+            "code": "5-04-1013-01",
+            "title": "Специалист по оказанию туристических услуг",
+            "specialty": 345
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 722,
+        "fields": {
+            "code": "5-04-1013-02",
+            "title": "Специалист по гостиничному сервису",
+            "specialty": 346
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 723,
+        "fields": {
+            "code": "5-04-1031-01",
+            "title": "Техник",
+            "specialty": 347
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 724,
+        "fields": {
+            "code": "5-04-1031-02",
+            "title": "Техник",
+            "specialty": 348
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 725,
+        "fields": {
+            "code": "5-04-1031-03",
+            "title": "Техник",
+            "specialty": 349
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 726,
+        "fields": {
+            "code": "5-04-1031-04",
+            "title": "Техник",
+            "specialty": 350
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 727,
+        "fields": {
+            "code": "5-04-1033-01",
+            "title": "Техник",
+            "specialty": 351
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 728,
+        "fields": {
+            "code": "5-04-1041-01",
+            "title": "Специалист по организации перевозок",
+            "specialty": 352
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 729,
+        "fields": {
+            "code": "5-04-1041-02",
+            "title": "Специалист по организации перевозок",
+            "specialty": 353
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 730,
+        "fields": {
+            "code": "5-04-1041-03",
+            "title": "Диспетчер по управлению воздушным движением",
+            "specialty": 354
+        }
+    },
+    {
+        "model": "api.Skill",
+        "pk": 731,
+        "fields": {
+            "code": "5-04-1043-01",
+            "title": "Специалист по почтовой деятельности",
+            "specialty": 355
+        }
+    }
+]
