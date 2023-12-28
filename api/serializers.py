@@ -47,7 +47,7 @@ class SpecialtyDetailSerializer(serializers.ModelSerializer):
 
 
 class SkillListSerializer(serializers.ModelSerializer):
-    specialty = SpecialtyListSerializer()
+    specialty = SpecialtyDetailSerializer()
 
     class Meta:
         model = Skill

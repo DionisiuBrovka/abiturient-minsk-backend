@@ -21,14 +21,12 @@ class RootView(ViewSet):
             'specialitys':reverse('specialitys',request=request),
             'specialitys-sso':reverse('specialitys-sso',request=request),
             'specialitys-pto':reverse('specialitys-pto',request=request),
-            'specialitys-est':reverse('specialitys-est', args=[1] ,request=request),
             'skills':reverse('skills',request=request),
             'skills-linked':reverse('skills-linked',request=request),
             'skills-sso':reverse('skills-sso',request=request),
             'skills-pto':reverse('skills-pto',request=request),
             'skills-linked-sso':reverse('skills-linked-sso',request=request),
             'skills-linked-pto':reverse('skills-linked-pto',request=request),
-            'skill-est':reverse('skill-est',request=request),
             'events':reverse('events',request=request),
             'faq':reverse('faq',request=request),
         }
@@ -70,7 +68,7 @@ class SpecialityPTOListView(ViewSet):
         return Response(serializer.data)
 
 
-class SpecialityESTListView(ViewSet):
+class SkillESTListView(ViewSet):
     def list(self, request, pk=1):
         queryset = Establishment.objects.filter(skills=pk)
         serializer = EstablishmentListSerializer(queryset, many=True)
@@ -136,7 +134,7 @@ class SkillDetailView(ViewSet):
 
 class SkillESTListView(ViewSet):
     def list(self, request, pk=1):
-        queryset = Establishment.objects.filter(skills__skill=pk)
+        queryset = Establishment.objects.filter(skills__skill=pk).distinct()
         serializer = EstablishmentListSerializer(queryset, many=True)
         return Response(serializer.data)
     

@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*', 'https://eduapp.dionisiubrovka.online']
 CSRF_TRUSTED_ORIGINS = ['https://eduapp.dionisiubrovka.online']
+CORS_ALLOWED_ORIGINS = ['https://eduapp.dionisiubrovka.online']
+if DEBUG:
+    CORS_ORIGIN_ALLOW_ALL = True
 
 
 # Application definition
@@ -40,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework'
+    'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -51,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',    
 ]
 
 ROOT_URLCONF = 'backend.urls'
