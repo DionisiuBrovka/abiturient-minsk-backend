@@ -78,23 +78,23 @@ class GalleryInline(admin.TabularInline):
 
 @admin.register(SkillForEstablishment)
 class SkillForEstablishmentAdmin(admin.ModelAdmin):
-    list_display = ['id','est', 'skill', 's_type']
-    list_display_links = ['id', 'est', 'skill']
+    list_display = ['id','est', 's_type']
+    list_display_links = ['id', 'est']
 
     fieldsets = [
         (
             "Основное", {
-                "fields" : ["est", "skill", "s_type", "avd", "rule"]
+                "fields" : ["est", "skill", "s_type", "rule"]
             }
         ),
         (
             "Бюджет", {
-                "fields" : ["b_count", "b_long"]
+                "fields" : ["b_count", "b_long", "b_avd"]
             }
         ),
         (
             "Платка", {
-                "fields" : ["p_count", "p_long"]
+                "fields" : ["p_count", "p_long", "p_avd"]
             }
         ),
         (

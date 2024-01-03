@@ -164,7 +164,7 @@ class Skill(models.Model):
         return f"{self.code} // {self.title} // "
 
     class Meta:
-        ordering = ['title']
+        ordering = ['code']
         verbose_name = "Квалификация"
         verbose_name_plural = "Квалификации"
 
@@ -178,16 +178,18 @@ class SkillForEstablishment(models.Model):
     ]
 
     est = models.ForeignKey('Establishment', models.CASCADE, related_name="skills", null=False, blank=False, verbose_name="УО")
-    skill = models.ForeignKey('Skill', models.CASCADE, related_name="svod", null=False , blank=False, verbose_name="Квалификация")
+    # skill = models.ForeignKey('Skill', models.CASCADE, related_name="svod", null=False , blank=False, verbose_name="Квалификация")
+    skill = models.ManyToManyField('skill', related_name="svod", null=False , blank=False, verbose_name="Квалификация")
     s_type = models.CharField(max_length=3, choices=SOISES, null=False, blank=False, verbose_name="На базе ...")
 
     b_count = models.IntegerField(null=True, blank=True, verbose_name="Количество набора на бюджет")
     b_long = models.CharField(max_length=255, null=True, blank=True, verbose_name="Продолжительность обучения на бюджете")
+    b_avd = models.FloatField(null=True, blank=True, verbose_name="Средний балл бюджет")
 
     p_count = models.IntegerField(null=True, blank=True, verbose_name="Количество набора на платное")
     p_long = models.CharField(max_length=255, null=True, blank=True, verbose_name="Продолжительность обучения на платном")
+    p_avd = models.FloatField(null=True, blank=True, verbose_name="Средний балл платное")
 
-    avd = models.FloatField(null=True, blank=True, verbose_name="Средний балл")
     rule = models.CharField(max_length=255, null=True, blank=True, verbose_name="Правила набора")
     
     is_opfr = models.BooleanField(default=False, verbose_name="Введется ли набор обучающихся с ОПФР")

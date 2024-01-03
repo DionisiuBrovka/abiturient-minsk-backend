@@ -72,6 +72,8 @@ class SkillForEstListSerializer(serializers.ModelSerializer):
 
 
 class SkillForEstDetailSerializer(serializers.ModelSerializer):
+    skill = SkillListSerializer(many=True, read_only=True)
+
     class Meta:
         model = SkillForEstablishment
         fields = '__all__'
@@ -86,7 +88,7 @@ class EstablishmentListSerializer(serializers.ModelSerializer):
 class EstablishmentDetailSerializer(serializers.ModelSerializer):    
     events = EventListSerializer(many=True, read_only=True)
     gallery = GallerySerializers(many=True, read_only=True)
-    skills = SkillForEstListSerializer(many=True, read_only=True)
+    skills = SkillForEstDetailSerializer(many=True, read_only=True)
 
     class Meta:
         model = Establishment
