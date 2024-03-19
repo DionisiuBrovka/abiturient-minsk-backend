@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  nginx:
+    build: ./nginx
+    volumes:
+      - app_static:/usr/src/app/static
+    ports:
+      - 80:80
+    depends_on:
+      - api
+
+  api:
+    build: ./
+    # command: python manage.py runserver 0.0.0.0:8000
+    # volumes:
+    #   - app:/usr/src/app/
+    expose:
+      - 8000
+    env_file:
+      - ./.env
+    depends_on:
+      - db
+    command: gunicorn backend.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - app_static:/usr/src/app/static
+    
+  db:
+      image: postgres:15
+      volumes:
+        - postgres_data:/var/lib/postgresql/data/
+      environment:
+        - POSTGRES_USER=db_app_root
+        - POSTGRES_PASSWORD=mata7654
+        - POSTGRES_DB=app_db
+
+volumes:
+  postgres_data:
+  app:
+  app_static:

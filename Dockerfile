@@ -1,18 +1,20 @@
-FROM python:3.9-alpine
+FROM python:3.11.4-slim-buster
 
+
+# set work directory
+WORKDIR /usr/src/app
+
+# set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
-RUN mkdir /code
-WORKDIR /code
+
+# install dependencies
 RUN pip install --upgrade pip
-COPY req.txt /code/
-
-
+COPY ./req.txt .
 RUN pip install -r req.txt
-COPY . /code/
 
-RUN python /code/manage.py migrate
+# copy project
+COPY ./ .
 
-EXPOSE 8000
-
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# make migrations
+#docker-compose exec api python manage.py migrate --noinput
