@@ -157,7 +157,7 @@ class Skill(models.Model):
     specialty = models.ForeignKey('Specialty', models.CASCADE, related_name="skills", null=False , blank=False, verbose_name="Специальность")
     
     desc = models.TextField(null=True, blank=True, verbose_name="Описание")
-    photo = models.ImageField(upload_to=wrapper, null=False, blank=False, verbose_name="Описание фото")
+    photo = models.ImageField(upload_to=wrapper, null=True, blank=True, verbose_name="Описание фото")
 
     def __str__(self) -> str:
         return f"{self.code} // {self.title} // "
