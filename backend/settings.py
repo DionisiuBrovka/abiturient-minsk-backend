@@ -68,7 +68,7 @@ DATABASES = {
         'NAME': 'myproject',
         'USER': 'db_admin',
         'PASSWORD': 'mata7654',
-        'HOST': 'localhost',
+        'HOST': 'db',
         'PORT': '5432',
     }
 }
