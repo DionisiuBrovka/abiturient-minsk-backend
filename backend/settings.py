@@ -9,9 +9,9 @@ SECRET_KEY = os.environ.get("SECRET_KEY", get_random_secret_key())
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['*', 'https://eduapp.dionisiubrovka.online', 'https://абитуриент-минск.бел', 'https://xn----7sbdqoacqqid3aufel.xn--90ais/']
-CSRF_TRUSTED_ORIGINS = ['https://eduapp.dionisiubrovka.online', 'https://абитуриент-минск.бел', 'https://xn----7sbdqoacqqid3aufel.xn--90ais/']
-CORS_ALLOWED_ORIGINS = ['https://eduapp.dionisiubrovka.online', 'https://абитуриент-минск.бел', 'https://xn----7sbdqoacqqid3aufel.xn--90ais/']
+ALLOWED_HOSTS = ['*', 'https://eduapp.dionisiubrovka.online', 'https://абитуриент-минск.бел', 'https://xn----7sbdqoacqqid3aufel.xn--90ais']
+CSRF_TRUSTED_ORIGINS = ['https://eduapp.dionisiubrovka.online', 'https://абитуриент-минск.бел', 'https://xn----7sbdqoacqqid3aufel.xn--90ais']
+CORS_ALLOWED_ORIGINS = ['https://eduapp.dionisiubrovka.online', 'https://абитуриент-минск.бел', 'https://xn----7sbdqoacqqid3aufel.xn--90ais']
 if DEBUG:
     CORS_ORIGIN_ALLOW_ALL = True
 
