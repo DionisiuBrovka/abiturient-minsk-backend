@@ -18,3 +18,4 @@ COPY ./ .
 
 # make migrations
 #docker-compose exec api python manage.py migrate --noinput
+ENTRYPOINT [ "sh", "-c", "/start.sh" ]
