@@ -24,15 +24,15 @@ services:
     command: gunicorn backend.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - app_static:/usr/src/app/static
-    
+
   db:
-      image: postgres:15
-      volumes:
-        - postgres_data:/var/lib/postgresql/data/
-      environment:
-        - POSTGRES_USER=db_app_root
-        - POSTGRES_PASSWORD=mata7654
-        - POSTGRES_DB=app_db
+    image: postgres:15
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=db_admin
+      - POSTGRES_PASSWORD=mata7654
+      - POSTGRES_DB=myproject
 
 volumes:
   postgres_data:

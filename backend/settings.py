@@ -7,11 +7,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get("SECRET_KEY", get_random_secret_key())
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*', 'https://eduapp.dionisiubrovka.online']
-CSRF_TRUSTED_ORIGINS = ['https://eduapp.dionisiubrovka.online', 'http://localhost']
-CORS_ALLOWED_ORIGINS = ['https://eduapp.dionisiubrovka.online', 'http://localhost']
+ALLOWED_HOSTS = ['*', 'https://eduapp.dionisiubrovka.online', 'https://абитуриент-минск.бел']
+CSRF_TRUSTED_ORIGINS = ['https://eduapp.dionisiubrovka.online', 'https://абитуриент-минск.бел']
+CORS_ALLOWED_ORIGINS = ['https://eduapp.dionisiubrovka.online', 'https://абитуриент-минск.бел']
 if DEBUG:
     CORS_ORIGIN_ALLOW_ALL = True
 
@@ -61,24 +61,17 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'backend.wsgi.application'
 
-if DEBUG:
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": "mydatabase.sqlite",
-        }
+
+DATABASES = {
+    "default": {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'myproject',
+        'USER': 'db_admin',
+        'PASSWORD': 'mata7654',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
-else:
-    DATABASES = {
-        "default": {
-            "ENGINE": os.environ.get("SQL_ENGINE", "django.db.backends.sqlite3"),
-            "NAME": os.environ.get("SQL_DATABASE"),
-            "USER": os.environ.get("SQL_USER", "user"),
-            "PASSWORD": os.environ.get("SQL_PASSWORD", "password"),
-            "HOST": os.environ.get("SQL_HOST", "localhost"),
-            "PORT": os.environ.get("SQL_PORT", "5432"),
-        }
-    }
+}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
