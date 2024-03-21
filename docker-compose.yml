@@ -38,3 +38,4 @@ volumes:
   postgres_data:
   app:
   app_static:
+  app_media:
