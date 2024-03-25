@@ -92,7 +92,7 @@ class Gallery(models.Model):
 
     est = models.ForeignKey('Establishment', models.CASCADE, related_name="gallery", null=False, blank=False, verbose_name="УО")
     photo = models.ImageField(upload_to=wrapper, null=False, blank=False, verbose_name="Превью")
-    desc = models.TextField(null=False, blank=False, verbose_name="Описание")
+    desc = models.TextField(null=True, blank=True, verbose_name="Описание")
 
     def __str__(self) -> str:
         return super().__str__()
@@ -156,8 +156,11 @@ class Skill(models.Model):
 
     specialty = models.ForeignKey('Specialty', models.CASCADE, related_name="skills", null=False , blank=False, verbose_name="Специальность")
     
-    desc = models.TextField(null=True, blank=True, verbose_name="Описание")
-    photo = models.ImageField(upload_to=wrapper, null=True, blank=True, verbose_name="Описание фото")
+    photo = models.ImageField(upload_to=wrapper, null=True, blank=True, verbose_name="Фото карточки")
+    desc = models.TextField(null=True, blank=True, verbose_name="Общее описание")
+    desc_hardskills = models.TextField(null=True, blank=True, verbose_name="Вы получите навыки по:")
+    desc_work = models.TextField(null=True, blank=True, verbose_name="Кем вы сможете работать")
+    desc_softskills = models.TextField(null=True, blank=True, verbose_name="Мы поможеи развить следующие профессиональные умения")
 
     def __str__(self) -> str:
         return f"{self.code} // {self.title} // "
@@ -179,7 +182,7 @@ class SkillForEstablishment(models.Model):
 
     est = models.ForeignKey('Establishment', models.CASCADE, related_name="skills", null=False, blank=False, verbose_name="УО")
     # skill = models.ForeignKey('Skill', models.CASCADE, related_name="svod", null=False , blank=False, verbose_name="Квалификация")
-    skill = models.ManyToManyField('skill', related_name="svod", null=False , blank=False, verbose_name="Квалификация")
+    skill = models.ManyToManyField('skill', related_name="svod", verbose_name="Квалификация")
     s_type = models.CharField(max_length=3, choices=SOISES, null=False, blank=False, verbose_name="На базе ...")
 
     b_count = models.IntegerField(null=True, blank=True, verbose_name="Количество набора на бюджет")
