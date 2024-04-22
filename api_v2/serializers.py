@@ -29,9 +29,17 @@ class SpecialtySerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class SvodSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = SkillForEstablishment
+        fields = '__all__'
+
+
 class SkillSerializer(serializers.ModelSerializer):
 
     specialty = SpecialtySerializer() 
+    svod = SvodSerializer(many=True)
 
     class Meta:
         model = Skill

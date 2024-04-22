@@ -16,6 +16,5 @@ RUN pip install -r req.txt
 # copy project
 COPY ./ .
 
-# make migrations
-#docker-compose exec api python manage.py migrate --noinput
-# ENTRYPOINT [ "sh", "-c", "/start.sh" ]
+# run main task
+CMD ["gunicorn"  , "backend.wsgi:application", "--bind", "0.0.0.0:8000"]
