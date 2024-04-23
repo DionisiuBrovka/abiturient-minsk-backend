@@ -185,7 +185,7 @@ class SkillForEstablishment(models.Model):
     est = models.ForeignKey('Establishment', models.CASCADE, related_name="skills", null=False, blank=False, verbose_name="УО")
     # skill = models.ForeignKey('Skill', models.CASCADE, related_name="svod", null=False , blank=False, verbose_name="Квалификация")
     skill = models.ManyToManyField('skill', related_name="svod", verbose_name="Квалификация")
-    s_type = models.CharField(max_length=3, choices=SOISES, null=False, blank=False, verbose_name="На базе ...")
+    s_type = models.CharField(max_length=5, choices=SOISES, null=False, blank=False, verbose_name="На базе ...")
 
     b_count = models.IntegerField(null=True, blank=True, verbose_name="Количество набора на бюджет")
     b_long = models.CharField(max_length=255, null=True, blank=True, verbose_name="Продолжительность обучения на бюджете")
