@@ -178,8 +178,7 @@ class SkillForEstablishment(models.Model):
         ("9","На основе общего базового образования (после 9 кл.)"),
         ("11","На основе общего среднего образования (после 11 кл.)"),
         ("ПТО","На основе ПТО"),
-        ("ССО","На основе ССО"),
-        ("Спец","На основе спец. школы"),
+        ("Спец","На основе специального образования"),
     ]
 
     est = models.ForeignKey('Establishment', models.CASCADE, related_name="skills", null=False, blank=False, verbose_name="УО")
