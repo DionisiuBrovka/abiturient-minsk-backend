@@ -1,0 +1,86 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./logs:/var/log/nginx
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./app/static:/usr/src/app/static
+      - ./app/media:/usr/src/app/media
+    ports:
+      - 80:80
+    depends_on:
+      - api
+    logging:
+      driver: telegram
+      options:
+        token: "6555701200:AAGuvc84CXJ9tUQHxqN6gpoYn3DErzYoWpE"
+        chat_id: "657525709"
+        template: "---------|    🕸️ {container_name}    |---------\n\n {log}"
+
+  api:
+    image: dionisiubrovka/eduapp
+    expose:
+      - 8000
+    env_file:
+      - ./env/.env
+    depends_on:
+      - db
+    environment:
+     - "DEBUG=False"
+    volumes:
+      - ./app/static:/usr/src/app/static
+      - ./app/media:/usr/src/app/media
+      - ./app/dumps:/usr/src/app/data_dumps
+    # logging:
+    #   driver: telegram
+    #   options:
+    #     token: "6555701200:AAGuvc84CXJ9tUQHxqN6gpoYn3DErzYoWpE"
+    #     chat_id: "657525709"
+    #     template: "---------|    🐍 {container_name}    |---------\n\n {log}"
+
+  db:
+    image: postgres:15
+    volumes:
+      - ./db/data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=db_admin
+      - POSTGRES_PASSWORD=mata7654
+      - POSTGRES_DB=myproject
+    logging:
+      driver: telegram
+      options:
+        token: "6555701200:AAGuvc84CXJ9tUQHxqN6gpoYn3DErzYoWpE"
+        chat_id: "657525709"
+        template: "---------|    💽 {container_name}    |---------\n\n {log}"
+
+  watchtower:
+    image: containrrr/watchtower
+    restart: unless-stopped
+    environment:
+     - WATCHTOWER_CLEANUP=true
+     - WATCHTOWER_INCLUDE_RESTARTING=true
+     - WATCHTOWER_ROLLING_RESTARTING=true
+     - WATCHTOWER_POLL_INTERVAL=600
+     - WATCHTOWER_INCLUDE_STOPPED=true
+     - WATCHTOWER_LOG_FORMAT=LogFmt
+     - WATCHTOWER_NO_PULL=false
+    security_opt:
+     - no-new-privileges:true
+    volumes:
+     - /etc/timezone:/etc/timezone:ro
+     - /etc/localtime:/etc/localtime:ro
+     - /var/run/docker.sock:/var/run/docker.sock
+    logging:
+      driver: telegram
+      options:
+        token: "6555701200:AAGuvc84CXJ9tUQHxqN6gpoYn3DErzYoWpE"
+        chat_id: "657525709"
+        template: "---------|    🔭 {container_name}    |---------\n\n {log}"
+
+volumes:
+  postgres_data:
+  app:
+  app_static:
+  app_media:
